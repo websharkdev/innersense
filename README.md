@@ -19,7 +19,7 @@ An immersive online experience that invites you to embark on a captivating explo
 
 ```bash
 git clone https://github.com/your-username/innersense.git
-cd mriya
+cd innersense
 ```
 
 2. Install dependencies:
