@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { memo } from "react";
 
 type Props = {
   link: string;
 };
 
-const HeaderItem = ({ link }: Props) => {
+const HeaderItem = memo(({ link }: Props) => {
   return (
     <Link
       href={`/${link.toLocaleLowerCase()}`}
@@ -13,6 +14,6 @@ const HeaderItem = ({ link }: Props) => {
       {link}
     </Link>
   );
-};
+});
 
 export default HeaderItem;

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { memo } from "react";
 
-const HeaderLogo = () => {
+const HeaderLogo = memo(() => {
   return (
     <Link
       href={`/`}
@@ -16,6 +17,6 @@ const HeaderLogo = () => {
       />
     </Link>
   );
-};
+});
 
 export default HeaderLogo;

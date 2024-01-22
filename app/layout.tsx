@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -21,6 +22,8 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         {children}
+
+        <SpeedInsights />
       </body>
     </html>
   );

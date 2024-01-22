@@ -12,6 +12,7 @@
     "@react-three/drei": "9.75.0",
     "@react-three/fiber": "8.13.3",
     "@types/three": "0.152.1",
+    "@vercel/speed-insights": "^1.0.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "gsap": "^3.12.4",

@@ -1,6 +1,6 @@
-type Props = {};
+import { memo } from "react";
 
-const Lights = (props: Props) => {
+const Lights = memo(() => {
   return (
     <>
       <spotLight
@@ -26,6 +26,6 @@ const Lights = (props: Props) => {
       />
     </>
   );
-};
+});
 
 export default Lights;

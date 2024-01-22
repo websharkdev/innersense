@@ -1,6 +1,4 @@
 import { Html } from "@react-three/drei";
-import { Vector3Props } from "@react-three/fiber";
-import React from "react";
 
 type Props = {
   tooltip: {

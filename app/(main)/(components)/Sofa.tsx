@@ -1,7 +1,8 @@
 import { useGLTF } from "@react-three/drei";
 import { Vector3 } from "three";
 import { useMediaQuery } from "usehooks-ts";
-import Tooltip from "./Tooltip";
+import { lazy } from "react";
+const Tooltip = lazy(() => import("./Tooltip"));
 
 const Sofa = () => {
   const { nodes, materials }: any = useGLTF("/models/sofa_compresed.glb");
@@ -57,6 +58,6 @@ const Sofa = () => {
   );
 };
 
-useGLTF.preload("/models/sofa_compresed.glb");
+useGLTF.preload("/models/sofa_compresed.glb"); // preload model
 
 export default Sofa;

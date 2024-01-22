@@ -3,7 +3,7 @@ import { BakeShadows, Center, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 import { Suspense, lazy, useEffect, useState } from "react";
-import { Header, Lights } from "./(components)";
+import { Floor, Header, Lights } from "./(components)";
 const Sofa = lazy(() => import("./(components)"));
 
 export default function Home() {
@@ -27,25 +27,22 @@ export default function Home() {
           <Suspense fallback={null}>
             <>
               <Lights />
+              {/* all lights in one component */}
               <BakeShadows />
+              {/* to improve performance bake shadows and make shadows static */}
               <OrbitControls
                 maxPolarAngle={Math.PI / 2}
                 minPolarAngle={0}
+                // set maximum and minimum polar (y) angle > you can't be below the floor
                 maxDistance={25}
                 minDistance={2}
+                // maximum and minimum zoom
                 panSpeed={0.5}
               />
               <Center>
                 <Sofa />
-                <mesh
-                  receiveShadow
-                  castShadow
-                  rotation={[-Math.PI / 2, 0, 0]}
-                  position={[0, -0.01, 0]}
-                >
-                  <boxGeometry args={[11, 11, 0.05, 1, 1, 1]} />
-                  <meshStandardMaterial color="#fff" />
-                </mesh>
+                {/*  */}
+                <Floor />
               </Center>
             </>
           </Suspense>
