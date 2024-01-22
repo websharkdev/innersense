@@ -27,4 +27,5 @@ const Tooltip = ({ tooltip }: Props) => {
   );
 };
 
+Tooltip.displayName = "Tooltip";
 export default Tooltip;

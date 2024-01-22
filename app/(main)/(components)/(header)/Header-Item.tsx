@@ -16,4 +16,6 @@ const HeaderItem = memo(({ link }: Props) => {
   );
 });
 
+HeaderItem.displayName = "Heaedr-Item";
+
 export default HeaderItem;

@@ -28,4 +28,6 @@ const Lights = memo(() => {
   );
 });
 
+Lights.displayName = "Lights";
+
 export default Lights;

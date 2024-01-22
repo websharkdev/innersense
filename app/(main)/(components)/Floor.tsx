@@ -14,4 +14,6 @@ const Floor = memo(() => {
   );
 });
 
+Floor.displayName = "Floor";
+
 export default Floor;

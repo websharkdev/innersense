@@ -9,4 +9,6 @@ const HeaedrBurger = memo(() => {
   );
 });
 
+HeaedrBurger.displayName = "Heaedr-Burger";
+
 export default HeaedrBurger;

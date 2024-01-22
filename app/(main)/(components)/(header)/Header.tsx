@@ -33,4 +33,6 @@ const Header = () => {
   );
 };
 
+Header.displayName = "Heaedr";
+
 export default Header;

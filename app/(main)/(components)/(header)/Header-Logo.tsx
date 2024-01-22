@@ -19,4 +19,6 @@ const HeaderLogo = memo(() => {
   );
 });
 
+HeaderLogo.displayName = "Heaedr-Logo";
+
 export default HeaderLogo;

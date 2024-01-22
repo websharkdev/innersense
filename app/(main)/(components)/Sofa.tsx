@@ -60,4 +60,6 @@ const Sofa = () => {
 
 useGLTF.preload("/models/sofa_compresed.glb"); // preload model
 
+Sofa.displayName = "Sofa";
+
 export default Sofa;
