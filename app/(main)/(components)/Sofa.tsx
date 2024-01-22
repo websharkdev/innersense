@@ -7,6 +7,7 @@ const Sofa = () => {
   const { nodes, materials }: any = useGLTF("/models/sofa_compresed.glb");
   const isMD = useMediaQuery("(max-width: 620px)");
   const isXS = useMediaQuery("(max-width: 360px)");
+
   const sofa_tooltip = [
     {
       positions: isMD
@@ -29,9 +30,11 @@ const Sofa = () => {
       price: 399,
     },
   ];
+  // we can easily add new tooltips without duplicating code
   return (
     <group dispose={null}>
       <group scale={isMD ? (isXS ? 0.25 : 0.35) : 1}>
+        {/* scale model if display small (360px and 620px) */}
         <mesh
           receiveShadow
           castShadow
@@ -46,6 +49,7 @@ const Sofa = () => {
         />
       </group>
 
+      {/* MIXING TSX with WEBGL > added dots / small cards */}
       {sofa_tooltip.map((tooltip, index) => (
         <Tooltip tooltip={tooltip} key={`${tooltip.name}_${index}`} />
       ))}
